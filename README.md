@@ -1,0 +1,63 @@
+# react.-formik-.real.io
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>React App</title>
+  </head>
+  <body>
+    <script src="./ella.formik.form.js"></script>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+    <div>
+      <p></p>
+        //The app is ready! You can proceed with the task instructions. TODO:
+        build you form here.
+
+      <form onSubmit={formik.handleSubmit}>
+        <div>Email:</div>
+        <input
+        id="emailField"
+        type="text"
+        name="email"
+        onChange={formik.handleChange}
+        value={formik.values.email}
+        />
+        {formik.errors.email ? (
+          <div id="emailError" style={{ color: red}}>
+            {formik.errors.email}
+          </div>
+        ) : null}
+        <div>Password:</div>
+        <input 
+        id="pswField"
+        type="text"
+        name="password"
+        onChange={formik.handleChange}
+        value={formike.value.password}
+        />
+        <br />
+        {formik.errors.password ? (
+          <div id="pswError" style={{ color: "red" }}>
+            {formik.errors.password}
+          </div>
+        ) : null}
+        <button id="submitBtn" type="submit">
+          Submit
+        </button>
+      </form>
+    </div>
+  </div>
+  </body>
+</html>
